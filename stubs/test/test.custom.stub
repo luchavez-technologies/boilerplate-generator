@@ -1,0 +1,27 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Tests\TestCase;
+
+/**
+ * Class {{ class }}
+ *
+ * @author {{ authorName }} <{{ authorEmail }}>
+ */
+class {{ class }} extends TestCase
+{
+    /**
+     * Example Test
+     *
+     * @test
+     */
+    public function example(): void
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+    }
+}

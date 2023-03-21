@@ -1,0 +1,23 @@
+<?php
+
+namespace {{ namespace }};
+
+use Exception;
+
+/**
+ * Class {{ class }}
+ *
+ * @author {{ authorName }} <{{ authorEmail }}>
+ */
+class {{ class }} extends Exception
+{
+    /**
+     * Report the exception.
+     *
+     * @return bool|null
+     */
+    public function report(): ?bool
+    {
+        //
+    }
+}

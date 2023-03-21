@@ -1,0 +1,16 @@
+<?php
+
+namespace {{ namespace }};
+
+/**
+ * Class {{ class }}
+ *
+ * @author {{ authorName }} <{{ authorEmail }}>
+ */
+class {{ class }}
+{
+    public function __construct()
+    {
+        // TODO: Implement __construct() method.
+    }
+}

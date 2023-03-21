@@ -1,0 +1,121 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
+
+/**
+ * Class {{ class }}
+ *
+ * @author {{ authorName }} <{{ authorEmail }}>
+ */
+class {{ class }} extends Controller
+{
+    /**
+     * Index
+     *
+     * @group Uncategorized
+     *
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function index(Request $request): JsonResponse
+    {
+        return customResponse()
+            ->data([])
+            ->message('Successfully collected record.')
+            ->success()
+            ->generate();
+    }
+
+    /**
+     * Store
+     *
+     * @group Uncategorized
+     *
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function store(Request $request): JsonResponse
+    {
+        return customResponse()
+            ->data([])
+            ->message('Successfully created record.')
+            ->success()
+            ->generate();
+    }
+
+    /**
+     * Show
+     *
+     * @group Uncategorized
+     *
+     * @param Request $request
+     * @param int $id
+     * @return JsonResponse
+     */
+    public function show(Request $request, $id): JsonResponse
+    {
+        return customResponse()
+            ->data([])
+            ->message('Successfully collected record.')
+            ->success()
+            ->generate();
+    }
+
+    /**
+     * Update
+     *
+     * @group Uncategorized
+     *
+     * @param Request $request
+     * @param int $id
+     * @return JsonResponse
+     */
+    public function update(Request $request, $id): JsonResponse
+    {
+        return customResponse()
+            ->data([])
+            ->message('Successfully updated record.')
+            ->success()
+            ->generate();
+    }
+
+    /**
+     * Soft Delete
+     *
+     * @group Uncategorized
+     *
+     * @param Request $request
+     * @param int $id
+     * @return JsonResponse
+     */
+    public function destroy(Request $request, $id): JsonResponse
+    {
+        return customResponse()
+            ->data([])
+            ->message('Successfully archived record.')
+            ->success()
+            ->generate();
+    }
+
+    /**
+     * Restore
+     *
+     * @group Uncategorized
+     *
+     * @param Request $request
+     * @param int $id
+     * @return JsonResponse
+     */
+    public function restore(Request $request, $id): JsonResponse
+    {
+        return customResponse()
+            ->data([])
+            ->message('Successfully restored record.')
+            ->success()
+            ->generate();
+    }
+}

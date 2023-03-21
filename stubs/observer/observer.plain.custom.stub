@@ -1,0 +1,13 @@
+<?php
+
+namespace {{ namespace }};
+
+/**
+ * Class {{ class }}
+ *
+ * @author {{ authorName }} <{{ authorEmail }}>
+ */
+class {{ class }}
+{
+    //
+}

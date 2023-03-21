@@ -1,0 +1,75 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ namespacedModel }};
+
+/**
+ * Class {{ class }}
+ *
+ * @author {{ authorName }} <{{ authorEmail }}>
+ */
+class {{ class }}
+{
+    /**
+     * Handle events after all transactions are committed.
+     *
+     * @var bool
+     */
+    public bool $afterCommit = true;
+
+    /**
+     * Handle the {{ model }} "created" event.
+     *
+     * @param  {{ model }} ${{ modelVariable }}
+     * @return void
+     */
+    public function created({{ model }} ${{ modelVariable }}): void
+    {
+        //
+    }
+
+    /**
+     * Handle the {{ model }} "updated" event.
+     *
+     * @param  {{ model }} ${{ modelVariable }}
+     * @return void
+     */
+    public function updated({{ model }} ${{ modelVariable }}): void
+    {
+        //
+    }
+
+    /**
+     * Handle the {{ model }} "deleted" event.
+     *
+     * @param  {{ model }} ${{ modelVariable }}
+     * @return void
+     */
+    public function deleted({{ model }} ${{ modelVariable }}): void
+    {
+        //
+    }
+
+    /**
+     * Handle the {{ model }} "restored" event.
+     *
+     * @param  {{ model }} ${{ modelVariable }}
+     * @return void
+     */
+    public function restored({{ model }} ${{ modelVariable }}): void
+    {
+        //
+    }
+
+    /**
+     * Handle the {{ model }} "force deleted" event.
+     *
+     * @param  {{ model }} ${{ modelVariable }}
+     * @return void
+     */
+    public function forceDeleted({{ model }} ${{ modelVariable }}): void
+    {
+        //
+    }
+}

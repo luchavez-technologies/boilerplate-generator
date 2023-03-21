@@ -1,0 +1,26 @@
+<?php
+
+namespace {{ namespace }};
+
+use Exception;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+
+/**
+ * Class {{ class }}
+ *
+ * @author {{ authorName }} <{{ authorEmail }}>
+ */
+class {{ class }} extends Exception
+{
+    /**
+     * Render the exception as an HTTP response.
+     *
+     * @param Request $request
+     * @return Response
+     */
+    public function render(Request $request): Response
+    {
+        //
+    }
+}
