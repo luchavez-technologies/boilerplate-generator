@@ -1,0 +1,29 @@
+<?php
+
+namespace {{ namespace }};
+
+use Luchavez\StarterKit\Abstracts\BaseJsonSerializable;
+use Illuminate\Foundation\Http\FormRequest;
+
+/**
+ * Class {{ class }}
+ *
+ * @author {{ authorName }} <{{ authorEmail }}>
+ */
+class {{ class }} extends BaseJsonSerializable
+{
+//    /**
+//     * @var string
+//     */
+//    public string $name;
+
+    /***** FROM BASEJSONSERIALIZABLE *****/
+
+    /**
+     * @return array
+     */
+    public function getFieldAliases(): array
+    {
+        return [];
+    }
+}

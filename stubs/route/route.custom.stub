@@ -1,0 +1,11 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+/**
+ * @author {{ authorName }} <{{ authorEmail }}>
+ */
+
+Route::get('test', function () {
+    return 'test';
+});

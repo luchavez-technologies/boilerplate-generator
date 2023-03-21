@@ -1,0 +1,28 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ namespacedFactory }};
+use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
+/**
+ * Trait {{ class }}
+ *
+ * @author {{ authorName }} <{{ authorEmail }}>
+ */
+trait {{ class }}
+{
+    use HasFactory;
+
+    /**
+     * Create a new factory instance for the model.
+     *
+     * @return Factory
+     */
+    protected static function newFactory(): Factory
+    {
+        return {{ factoryName }}::new();
+    }
+}
+

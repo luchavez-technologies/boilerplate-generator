@@ -1,0 +1,15 @@
+<?php
+
+namespace {{ namespace }};
+
+use Exception;
+
+/**
+ * Class {{ class }}
+ *
+ * @author {{ authorName }} <{{ authorEmail }}>
+ */
+class {{ class }} extends Exception
+{
+    //
+}

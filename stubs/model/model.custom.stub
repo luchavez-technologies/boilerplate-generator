@@ -1,0 +1,53 @@
+<?php
+
+namespace {{ namespace }};
+
+use Luchavez\StarterKit\Traits\UsesUUIDTrait;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Model;
+
+/**
+ * Class {{ class }}
+ *
+ * @author {{ authorName }} <{{ authorEmail }}>
+ */
+class {{ class }} extends Model
+{
+    use UsesUUIDTrait, SoftDeletes;
+
+    /**
+     * Get the route key for the model.
+     *
+     * @return string
+     */
+    public function getRouteKeyName(): string
+    {
+        return 'uuid';
+    }
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        // write here...
+        'deleted_at',
+    ];
+
+    /***** RELATIONSHIPS *****/
+
+    //
+
+    /***** SCOPES *****/
+
+    //
+
+    /***** ACCESSORS & MUTATORS *****/
+
+    //
+
+    /***** OTHER METHODS *****/
+
+    //
+}

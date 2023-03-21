@@ -1,0 +1,15 @@
+<?php
+
+namespace {{ namespace }};
+
+use Luchavez\StarterKit\Abstracts\BaseRepository;
+
+/**
+ * Class {{ class }}
+ *
+ * @author {{ authorName }} <{{ authorEmail }}>
+ */
+class {{ class }} extends BaseRepository
+{
+    // Write your logic here...
+}

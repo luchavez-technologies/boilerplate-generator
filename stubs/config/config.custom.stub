@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * @author {{ authorName }} <{{ authorEmail }}>
+ */
+
+return [
+    //'greeting' => env('HELLO_WORLD', true),
+];

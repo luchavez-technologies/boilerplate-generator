@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @author {{ authorName }} <{{ authorEmail }}>
+ */
+
+use {{ namespacedService }};
+
+if (! function_exists('{{ serviceCamel }}'))
+{
+    /**
+     * @return {{ serviceClass }}
+     */
+    function {{ serviceCamel }}(): {{ serviceClass }}
+    {
+        return resolve('{{ serviceSlug }}');
+    }
+}
+
+if (! function_exists('{{ serviceSnake }}'))
+{
+    /**
+     * @return {{ serviceClass }}
+     */
+    function {{ serviceSnake }}(): {{ serviceClass }}
+    {
+        return {{ serviceCamel }}();
+    }
+}

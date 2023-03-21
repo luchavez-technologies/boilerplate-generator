@@ -1,0 +1,23 @@
+<?php
+
+namespace {{ namespace }};
+
+use PHPUnit\Framework\TestCase;
+
+/**
+ * Class {{ class }}
+ *
+ * @author {{ authorName }} <{{ authorEmail }}>
+ */
+class {{ class }} extends TestCase
+{
+    /**
+     * Example Test
+     *
+     * @test
+     */
+    public function example(): void
+    {
+        $this->assertTrue(true);
+    }
+}
