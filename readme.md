@@ -1,4 +1,4 @@
-# Fligno Packager & Boilerplate Generator for Laravel
+# Boilerplate Generator
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
@@ -10,7 +10,7 @@ This is where your description should go. Take a look at [contributing.md](contr
 ## Installation
 
 ```bash
-$ composer req fligno/boilerplate-generator --dev
+$ composer req luchavez/boilerplate-generator --dev
 $ php artisan bg:install
 ```
 
@@ -96,16 +96,16 @@ There would be 2 Packages inside your Laravel Project:
 
 1. Create a Dummy Package for Testing:
     ```bash 
-    $ php artisan fligno:package:create Dummy Package
+    $ php artisan bg:package:create Dummy Package
     ```
 
 2. Proceed to Testing
     ``` bash
-    $ php artisan fligno:test
+    $ php artisan bg:test
     ```
     or
     ``` bash
-    $ php artisan fligno:test -p
+    $ php artisan bg:test -p
     ```
 
     It would probably be the same as below
@@ -114,7 +114,7 @@ There would be 2 Packages inside your Laravel Project:
     
     [0] Laravel
     [1] dummy/package
-    [2] fligno/boilerplate-generator
+    [2] luchavez/boilerplate-generator
     ```
     Choose the ```dummy/package``` you created earlier by entering its corresponding number. In this case, ```[1]```.
 
@@ -122,7 +122,7 @@ There would be 2 Packages inside your Laravel Project:
 
 4. Upon successful testing, you can now remove the Dummy Package you create by using
    ``` bash
-    $ php artisan fligno:package:remove Dummy Package
+    $ php artisan bg:package:remove Dummy Package
     ```
 
 ## Contributing
@@ -142,14 +142,14 @@ If you discover any security related issues, please email jamescarloluchavez@gma
 
 MIT. Please see the [license file](license.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/fligno/boilerplate-generator.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/fligno/boilerplate-generator.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/fligno/boilerplate-generator/master.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/luchavez/boilerplate-generator.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/luchavez/boilerplate-generator.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/luchavez/boilerplate-generator/master.svg?style=flat-square
 [ico-styleci]: https://styleci.io/repos/12345678/shield
 
-[link-packagist]: https://packagist.org/packages/fligno/boilerplate-generator
-[link-downloads]: https://packagist.org/packages/fligno/boilerplate-generator
-[link-travis]: https://travis-ci.org/fligno/boilerplate-generator
+[link-packagist]: https://packagist.org/packages/luchavez/boilerplate-generator
+[link-downloads]: https://packagist.org/packages/luchavez/boilerplate-generator
+[link-travis]: https://travis-ci.org/luchavez/boilerplate-generator
 [link-styleci]: https://styleci.io/repos/12345678
-[link-author]: https://github.com/luhmewep
+[link-author]: https://github.com/luchmewep
 [link-contributors]: ../../contributors

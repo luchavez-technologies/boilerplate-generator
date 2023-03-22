@@ -2,7 +2,7 @@
 
 Contributions are welcome and will be fully credited.
 
-Contributions are accepted via Pull Requests on [GitHub](https://github.com/luhmewep/boilerplate-generator).
+Contributions are accepted via Pull Requests on [GitHub](https://github.com/luchmewep/boilerplate-generator).
 
 # Things you could do
 If you want to contribute but do not know where to start, this list provides some starting points.

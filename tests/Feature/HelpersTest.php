@@ -14,14 +14,14 @@ it('can create package-domain base path', function (string|null $package, string
         ->toBe($expected);
 })->with([
     'both package and domain' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => 'Hello.World',
-        'expected' => 'packages/fligno/test-package/domains/Hello/domains/World',
+        'expected' => 'packages/luchavez/test-package/domains/Hello/domains/World',
     ],
     'package only' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => null,
-        'expected' => 'packages/fligno/test-package',
+        'expected' => 'packages/luchavez/test-package',
     ],
     'domain only' => [
         'package' => null,
@@ -42,14 +42,14 @@ it('can create package-domain app path', function (string|null $package, string|
         ->toBe($expected);
 })->with([
     'both package and domain' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => 'Hello.World',
-        'expected' => 'packages/fligno/test-package/domains/Hello/domains/World/src',
+        'expected' => 'packages/luchavez/test-package/domains/Hello/domains/World/src',
     ],
     'package only' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => null,
-        'expected' => 'packages/fligno/test-package/src',
+        'expected' => 'packages/luchavez/test-package/src',
     ],
     'domain only' => [
         'package' => null,
@@ -70,14 +70,14 @@ it('can create package-domain database path', function (string|null $package, st
         ->toBe($expected);
 })->with([
     'both package and domain' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => 'Hello.World',
-        'expected' => 'packages/fligno/test-package/domains/Hello/domains/World/database',
+        'expected' => 'packages/luchavez/test-package/domains/Hello/domains/World/database',
     ],
     'package only' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => null,
-        'expected' => 'packages/fligno/test-package/database',
+        'expected' => 'packages/luchavez/test-package/database',
     ],
     'domain only' => [
         'package' => null,
@@ -98,14 +98,14 @@ it('can create package-domain migrations path', function (string|null $package, 
         ->toBe($expected);
 })->with([
     'both package and domain' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => 'Hello.World',
-        'expected' => 'packages/fligno/test-package/domains/Hello/domains/World/database/migrations',
+        'expected' => 'packages/luchavez/test-package/domains/Hello/domains/World/database/migrations',
     ],
     'package only' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => null,
-        'expected' => 'packages/fligno/test-package/database/migrations',
+        'expected' => 'packages/luchavez/test-package/database/migrations',
     ],
     'domain only' => [
         'package' => null,
@@ -126,14 +126,14 @@ it('can create package-domain seeders path', function (string|null $package, str
         ->toBe($expected);
 })->with([
     'both package and domain' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => 'Hello.World',
-        'expected' => 'packages/fligno/test-package/domains/Hello/domains/World/database/seeders',
+        'expected' => 'packages/luchavez/test-package/domains/Hello/domains/World/database/seeders',
     ],
     'package only' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => null,
-        'expected' => 'packages/fligno/test-package/database/seeders',
+        'expected' => 'packages/luchavez/test-package/database/seeders',
     ],
     'domain only' => [
         'package' => null,
@@ -154,14 +154,14 @@ it('can create package-domain factories path', function (string|null $package, s
         ->toBe($expected);
 })->with([
     'both package and domain' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => 'Hello.World',
-        'expected' => 'packages/fligno/test-package/domains/Hello/domains/World/database/factories',
+        'expected' => 'packages/luchavez/test-package/domains/Hello/domains/World/database/factories',
     ],
     'package only' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => null,
-        'expected' => 'packages/fligno/test-package/database/factories',
+        'expected' => 'packages/luchavez/test-package/database/factories',
     ],
     'domain only' => [
         'package' => null,
@@ -182,14 +182,14 @@ it('can create package-domain resources path', function (string|null $package, s
         ->toBe($expected);
 })->with([
     'both package and domain' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => 'Hello.World',
-        'expected' => 'packages/fligno/test-package/domains/Hello/domains/World/resources',
+        'expected' => 'packages/luchavez/test-package/domains/Hello/domains/World/resources',
     ],
     'package only' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => null,
-        'expected' => 'packages/fligno/test-package/resources',
+        'expected' => 'packages/luchavez/test-package/resources',
     ],
     'domain only' => [
         'package' => null,
@@ -210,14 +210,14 @@ it('can create package-domain views path', function (string|null $package, strin
         ->toBe($expected);
 })->with([
     'both package and domain' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => 'Hello.World',
-        'expected' => 'packages/fligno/test-package/domains/Hello/domains/World/resources/views',
+        'expected' => 'packages/luchavez/test-package/domains/Hello/domains/World/resources/views',
     ],
     'package only' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => null,
-        'expected' => 'packages/fligno/test-package/resources/views',
+        'expected' => 'packages/luchavez/test-package/resources/views',
     ],
     'domain only' => [
         'package' => null,
@@ -238,14 +238,14 @@ it('can create package-domain lang path', function (string|null $package, string
         ->toBe($expected);
 })->with([
     'both package and domain' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => 'Hello.World',
-        'expected' => 'packages/fligno/test-package/domains/Hello/domains/World/resources/lang',
+        'expected' => 'packages/luchavez/test-package/domains/Hello/domains/World/resources/lang',
     ],
     'package only' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => null,
-        'expected' => 'packages/fligno/test-package/resources/lang',
+        'expected' => 'packages/luchavez/test-package/resources/lang',
     ],
     'domain only' => [
         'package' => null,
@@ -266,14 +266,14 @@ it('can create package-domain tests path', function (string|null $package, strin
         ->toBe($expected);
 })->with([
     'both package and domain' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => 'Hello.World',
-        'expected' => 'packages/fligno/test-package/domains/Hello/domains/World/tests',
+        'expected' => 'packages/luchavez/test-package/domains/Hello/domains/World/tests',
     ],
     'package only' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => null,
-        'expected' => 'packages/fligno/test-package/tests',
+        'expected' => 'packages/luchavez/test-package/tests',
     ],
     'domain only' => [
         'package' => null,
@@ -294,14 +294,14 @@ it('can create package-domain routes path', function (string|null $package, stri
         ->toBe($expected);
 })->with([
     'both package and domain' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => 'Hello.World',
-        'expected' => 'packages/fligno/test-package/domains/Hello/domains/World/routes',
+        'expected' => 'packages/luchavez/test-package/domains/Hello/domains/World/routes',
     ],
     'package only' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => null,
-        'expected' => 'packages/fligno/test-package/routes',
+        'expected' => 'packages/luchavez/test-package/routes',
     ],
     'domain only' => [
         'package' => null,
@@ -322,14 +322,14 @@ it('can create package-domain config path', function (string|null $package, stri
         ->toBe($expected);
 })->with([
     'both package and domain' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => 'Hello.World',
-        'expected' => 'packages/fligno/test-package/domains/Hello/domains/World/config',
+        'expected' => 'packages/luchavez/test-package/domains/Hello/domains/World/config',
     ],
     'package only' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => null,
-        'expected' => 'packages/fligno/test-package/config',
+        'expected' => 'packages/luchavez/test-package/config',
     ],
     'domain only' => [
         'package' => null,
@@ -350,14 +350,14 @@ it('can create package-domain helpers path', function (string|null $package, str
         ->toBe($expected);
 })->with([
     'both package and domain' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => 'Hello.World',
-        'expected' => 'packages/fligno/test-package/domains/Hello/domains/World/helpers',
+        'expected' => 'packages/luchavez/test-package/domains/Hello/domains/World/helpers',
     ],
     'package only' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => null,
-        'expected' => 'packages/fligno/test-package/helpers',
+        'expected' => 'packages/luchavez/test-package/helpers',
     ],
     'domain only' => [
         'package' => null,
@@ -378,14 +378,14 @@ it('can create package-domain domains path', function (string|null $package, str
         ->toBe($expected);
 })->with([
     'both package and domain' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => 'Hello.World',
-        'expected' => 'packages/fligno/test-package/domains/Hello/domains/World/domains',
+        'expected' => 'packages/luchavez/test-package/domains/Hello/domains/World/domains',
     ],
     'package only' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => null,
-        'expected' => 'packages/fligno/test-package/domains',
+        'expected' => 'packages/luchavez/test-package/domains',
     ],
     'domain only' => [
         'package' => null,
@@ -405,12 +405,12 @@ it('can create package-domain base namespace', function (string|null $package, s
     expect(package_domain_namespace($package, $domain, true))->toBe($expected);
 })->with([
     'both package and domain' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => 'Hello.World',
         'expected' => 'Luchavez\\TestPackage\\Domains\\Hello\\Domains\\World',
     ],
     'package only' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => null,
         'expected' => 'Luchavez\\TestPackage',
     ],
@@ -430,12 +430,12 @@ it('can create package-domain app namespace', function (string|null $package, st
     expect(package_domain_app_namespace($package, $domain, true))->toBe($expected);
 })->with([
     'both package and domain' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => 'Hello.World',
         'expected' => 'Luchavez\\TestPackage\\Domains\\Hello\\Domains\\World\\',
     ],
     'package only' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => null,
         'expected' => 'Luchavez\\TestPackage\\',
     ],
@@ -455,12 +455,12 @@ it('can create package-domain database namespace', function (string|null $packag
     expect(package_domain_database_namespace($package, $domain, true))->toBe($expected);
 })->with([
     'both package and domain' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => 'Hello.World',
         'expected' => 'Luchavez\\TestPackage\\Domains\\Hello\\Domains\\World\\Database',
     ],
     'package only' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => null,
         'expected' => 'Luchavez\\TestPackage\\Database',
     ],
@@ -480,12 +480,12 @@ it('can create package-domain seeders namespace', function (string|null $package
     expect(package_domain_seeders_namespace($package, $domain, true))->toBe($expected);
 })->with([
     'both package and domain' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => 'Hello.World',
         'expected' => 'Luchavez\\TestPackage\\Domains\\Hello\\Domains\\World\\Database\\Seeders\\',
     ],
     'package only' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => null,
         'expected' => 'Luchavez\\TestPackage\\Database\\Seeders\\',
     ],
@@ -505,12 +505,12 @@ it('can create package-domain factories namespace', function (string|null $packa
     expect(package_domain_factories_namespace($package, $domain, true))->toBe($expected);
 })->with([
     'both package and domain' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => 'Hello.World',
         'expected' => 'Luchavez\\TestPackage\\Domains\\Hello\\Domains\\World\\Database\\Factories\\',
     ],
     'package only' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => null,
         'expected' => 'Luchavez\\TestPackage\\Database\\Factories\\',
     ],
@@ -530,12 +530,12 @@ it('can create package-domain tests namespace', function (string|null $package, 
     expect(package_domain_tests_namespace($package, $domain, true))->toBe($expected);
 })->with([
     'both package and domain' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => 'Hello.World',
         'expected' => 'Luchavez\\TestPackage\\Domains\\Hello\\Domains\\World\\Tests\\',
     ],
     'package only' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => null,
         'expected' => 'Luchavez\\TestPackage\\Tests\\',
     ],
@@ -555,12 +555,12 @@ it('can create package-domain domains namespace', function (string|null $package
     expect(package_domain_domains_namespace($package, $domain, true))->toBe($expected);
 })->with([
     'both package and domain' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => 'Hello.World',
         'expected' => 'Luchavez\\TestPackage\\Domains\\Hello\\Domains\\World\\Domains\\',
     ],
     'package only' => [
-        'package' => 'fligno/test-package',
+        'package' => 'luchavez/test-package',
         'domain' => null,
         'expected' => 'Luchavez\\TestPackage\\Domains\\',
     ],

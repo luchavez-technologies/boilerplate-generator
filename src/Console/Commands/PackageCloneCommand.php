@@ -9,7 +9,7 @@ use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputArgument;
 
 /**
- * Class FlignoPackageCloneCommand
+ * Class PackageCloneCommand
  *
  * @author James Carlo Luchavez <jamescarloluchavez@gmail.com>
  *
