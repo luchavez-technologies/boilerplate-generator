@@ -23,7 +23,7 @@ class AwsPublishCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Publish all basic AWS related configuration for deployment';
+    protected $description = 'Publish all basic AWS related configuration for deployment.';
 
     /**
      * Execute the console command.

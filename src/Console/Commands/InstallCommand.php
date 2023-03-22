@@ -47,13 +47,13 @@ class InstallCommand extends Command
      */
     public function handle(): int
     {
-        $package = 'fligno/starter-kit';
+        $package = 'luchavez/starter-kit';
         $this->ongoing("Initializing your project to use <bold>$package</bold> package");
 
-        // Ensure `fligno/starter-kit` is a project dependency
+        // Ensure `luchavez/starter-kit` is a project dependency
         $this->newLine();
         $this->ongoing("Installing <bold>$package</bold> as a project dependency");
-        if (! Arr::has(getContentsFromComposerJson(), 'require.fligno/starter-kit')) {
+        if (! Arr::has(getContentsFromComposerJson(), 'require.luchavez/starter-kit')) {
             $process = make_process(explode(' ', "composer require $package --no-update -n"));
             $process->start();
             $process->wait();
