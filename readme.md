@@ -5,12 +5,18 @@
 
 <p align="center"><img src="./images/logo.png" width="300"/></p>
 
+If you're developing a Laravel app, you know how quickly it can grow and become complex. You don't want to end up with a messy codebase that's hard to maintain and debug. You need a way to organize your code into modular and reusable packages and domains that imitates the `Domain-Driven Design (DDD)` principles.
+
+That's where `luchavez/boilerplate-generator` comes in handy. It's a Laravel package that helps you create, manage, and publish your own packages and domains with ease. It also provides a set of handy commands to generate common classes such as controllers, models, casts, components, and more.
+
+With `luchavez/boilerplate-generator`, you can keep your Laravel app clean, structured, and scalable. You can also share your packages with the world or use them in other projects. It's the ultimate tool for Laravel developers who want to level up their skills and productivity.
+
 ## Installation
 
 ```bash
 composer require luchavez/boilerplate-generator --dev
-php artisan bg:install
-php artisan bg:env:publish --all  // publishes predefined env variables to .env file
+php artisan bg:install            // executes a series of steps necessary to utilize the package
+php artisan bg:env:publish --all  // publishes predefined env variables to the `.env` file
 ```
 
 ## Usage
@@ -86,11 +92,9 @@ php artisan bg:env:publish --all  // publishes predefined env variables to .env 
 | Docs           | `bg:docs`           | Generate Scribe documentations.                                     |                            |
 | Env Variables  | `bg:env:publish`    | Publish all environment variables from root, packages, and domains. |                            |
 | Gitlab CI      | `bg:gitlab:publish` | Create a Gitlab CI YML file in a specific package.                  |                            |
-| Package List   | `bg:package:list`   | List all locally installed packages.                                |
-| Package Create | `bg:package:create` | Create a new Laravel package.                                       |
 | Install        | `bg:install`        | Setup your Laravel application to utilize the package.              |
 | Clear Logs     | `bg:log:clear`      | Clear laravel.log contents.                                         |
-| Test           | `bg:test`           | Run the application and package tests.                                         |
+| Test           | `bg:test`           | Run the application and package tests.                              |
 
 ## Change log
 
