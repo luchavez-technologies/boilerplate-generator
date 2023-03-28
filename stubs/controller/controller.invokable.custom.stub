@@ -23,7 +23,7 @@ class {{ class }} extends Controller
      */
     public function __invoke(Request $request): JsonResponse
     {
-        return customResponse()
+        return simpleResponse()
             ->data([])
             ->message('Successfully collected record.')
             ->success()

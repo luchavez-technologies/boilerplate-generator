@@ -102,6 +102,14 @@ class InstallCommand extends Command
             $this->warning("<bold>$pest</bold> is already initialized. Skipped.");
         }
 
+        // Publish env variables
+        $this->newLine();
+        $this->ongoing("Initializing <bold>$pest</bold>");
+        $this->callSilently('bg:env:publish', [
+            '--all' => true,
+        ]);
+        $this->done("Successfully published the env variables");
+
         return self::SUCCESS;
     }
 }
