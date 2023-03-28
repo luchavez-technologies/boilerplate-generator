@@ -147,6 +147,7 @@ class BoilerplateGeneratorServiceProvider extends ServiceProvider
         'BG_AUTHOR_NAME' => 'James Carlo Luchavez',
         'BG_AUTHOR_EMAIL' => 'jamescarloluchavez@gmail.com',
         'BG_AUTHOR_HOMEPAGE' => 'https://www.linkedin.com/in/jsluchavez',
+        'BG_PACKAGE_SKELETON' => 'https://github.com/luchmewep/laravel-package-skeleton/archive/develop.zip',
     ];
 
     /**

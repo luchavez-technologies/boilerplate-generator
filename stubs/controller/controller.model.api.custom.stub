@@ -52,7 +52,7 @@ class {{ class }} extends Controller
 
         event(new {{ indexEvent }}($data));
 
-        return customResponse()
+        return simpleResponse()
             ->data($data)
             ->message('Successfully collected record.')
             ->success()
@@ -75,7 +75,7 @@ class {{ class }} extends Controller
 
         event(new {{ storeEvent }}($model));
 
-        return customResponse()
+        return simpleResponse()
             ->data($model)
             ->message('Successfully created record.')
             ->success()
@@ -95,7 +95,7 @@ class {{ class }} extends Controller
     {
         event(new {{ showEvent }}(${{ modelVariable }}));
 
-        return customResponse()
+        return simpleResponse()
             ->data(${{ modelVariable }})
             ->message('Successfully collected record.')
             ->success()
@@ -117,7 +117,7 @@ class {{ class }} extends Controller
 
         event(new {{ updateEvent }}(${{ modelVariable }}));
 
-        return customResponse()
+        return simpleResponse()
             ->data(${{ modelVariable }})
             ->message('Successfully updated record.')
             ->success()
@@ -139,7 +139,7 @@ class {{ class }} extends Controller
 
         event(new {{ deleteEvent }}(${{ modelVariable }}));
 
-        return customResponse()
+        return simpleResponse()
             ->data(${{ modelVariable }})
             ->message('Successfully archived record.')
             ->success()
@@ -161,7 +161,7 @@ class {{ class }} extends Controller
 
         event(new {{ restoreEvent }}($data));
 
-        return customResponse()
+        return simpleResponse()
             ->data($data)
             ->message('Successfully restored record.')
             ->success()

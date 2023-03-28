@@ -3,15 +3,22 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-<p align="center"><img src="./images/logo.png" width="300"/></p>
+![Supercharge your Laravel App!](./images/banner.png)
 
-This is where your description should go. Take a look at [contributing.md](contributing.md) to see a to do list.
+If you're developing a Laravel app, you know how quickly it can grow and become complex. You don't want to end up with a messy codebase that's hard to maintain and debug. You need a way to organize your code into modular and reusable packages and domains that imitates the `Domain-Driven Design (DDD)` principles.
+
+That's where `luchavez/boilerplate-generator` comes in handy. It's a Laravel package that helps you create, manage, and publish your own packages and domains with ease. It also provides a set of handy commands to generate common classes such as controllers, models, casts, components, and more.
+
+With `luchavez/boilerplate-generator`, you can keep your Laravel app clean, structured, and scalable. You can also share your packages with the world or use them in other projects. It's the ultimate tool for Laravel developers who want to level up their skills and productivity.
+
+<p align="center"><img src="./images/logo.png" width="300"/></p>
 
 ## Installation
 
 ```bash
-$ composer require luchavez/boilerplate-generator --dev
-$ php artisan bg:install
+composer require luchavez/boilerplate-generator --dev
+php artisan bg:install            // executes a series of steps necessary to utilize the package
+php artisan bg:env:publish --all  // publishes predefined env variables to the `.env` file
 ```
 
 ## Usage
@@ -43,20 +50,20 @@ $ php artisan bg:install
 |----------------------|:----------------------:|:-------------------:|:-----------------------------------------------------------------------------|
 | Cast                 |     `bg:make:cast`     |     `make:cast`     | Create a new custom Eloquent cast class in Laravel or in a specific package. |
 | Channel              |   `bg:make:channel`    |   `make:channel`    | Create a new channel class in Laravel or in a specific package.              |
-| Class                |    `bg:make:class`     |                     | Create a new PHP class in Laravel or in a specific package.                  |
+| Class                |    `bg:make:class`     |          ❌          | Create a new PHP class in Laravel or in a specific package.                  |
 | Command              |   `bg:make:command`    |   `make:command`    | Create a new Artisan command in Laravel or in a specific package.            |
 | Component            |  `bg:make:component`   |  `make:component`   | Create a new view component class in Laravel or in a specific package.       |
-| Config               |    `bg:make:config`    |                     | Create a new view component class in Laravel or in a specific package.       |
+| Config               |    `bg:make:config`    |          ❌          | Create a new view component class in Laravel or in a specific package.       |
 | Controller           |  `bg:make:controller`  |  `make:controller`  | Create a new controller class in Laravel or in a specific package.           |
-| Data                 |     `bg:make:data`     |                     | Create a new data class in Laravel or in a specific package.                 |
-| Data Factory         |      `bg:make:df`      |                     | Create a new data factory class in Laravel or in a specific package.         |
-| Data Transfer Object |     `bg:make:dto`      |                     | Create data tranfer object (DTO) files in Laravel or in a specific package.  |
+| Data                 |     `bg:make:data`     |          ❌          | Create a new data class in Laravel or in a specific package.                 |
+| Data Factory         |      `bg:make:df`      |          ❌          | Create a new data factory class in Laravel or in a specific package.         |
+| Data Transfer Object |     `bg:make:dto`      |          ❌          | Create data tranfer object (DTO) files in Laravel or in a specific package.  |
 | Event                |    `bg:make:event`     |    `make:event`     | Create a new event class in Laravel or in a specific package.                |
 | Exception            |  `bg:make:exception`   |  `make:exception`   | Create a new custom exception class in Laravel or in a specific package.     |
-| Facade               |    `bg:make:facade`    |                     | Create a new facade in Laravel or in a specific package.                     |
+| Facade               |    `bg:make:facade`    |          ❌          | Create a new facade in Laravel or in a specific package.                     |
 | Factory              |   `bg:make:factory`    |   `make:factory`    | Create a new model factory in Laravel or in a specific package.              |
-| Helper               |    `bg:make:helper`    |                     | Create a new helper file in Laravel or in a specific package.                |
-| Interface            |  `bg:make:interface`   |                     | Create a new interface in Laravel or in a specific package.                  |
+| Helper               |    `bg:make:helper`    |          ❌          | Create a new helper file in Laravel or in a specific package.                |
+| Interface            |  `bg:make:interface`   |          ❌          | Create a new interface in Laravel or in a specific package.                  |
 | Job                  |     `bg:make:job`      |     `make:job`      | Create a new job class in Laravel or in a specific package.                  |
 | Listener             |   `bg:make:listener`   |   `make:listener`   | Create a new event listener class in Laravel or in a specific package.       |
 | Mail                 |     `bg:make:mail`     |     `make:mail`     | Create a new email class in Laravel or in a specific package.                |
@@ -67,16 +74,16 @@ $ php artisan bg:install
 | Observer             |   `bg:make:observer`   |   `make:observer`   | Create a new observer class in Laravel or in a specific package.             |
 | Policy               |    `bg:make:policy`    |    `make:policy`    | Create a new policy class in Laravel or in a specific package.               |
 | Provider             |   `bg:make:provider`   |   `make:provider`   | Create a new service provider class in Laravel or in a specific package.     |
-| Repository           |  `bg:make:repository`  |                     | Create a new repository class in Laravel or in a specific package.           |
+| Repository           |  `bg:make:repository`  |          ❌          | Create a new repository class in Laravel or in a specific package.           |
 | Request              |   `bg:make:request`    |   `make:request`    | Create a new form request class in Laravel or in a specific package.         |
 | Resource             |   `bg:make:resource`   |   `make:resource`   | Create a new resource file in Laravel or in a specific package.              |
-| Routes               |    `bg:make:route`     |                     | Create new route file in Laravel or in a specific package.                   |
+| Routes               |    `bg:make:route`     |          ❌          | Create new route file in Laravel or in a specific package.                   |
 | Rule                 |     `bg:make:rule`     |     `make:rule`     | Create a new validation rule in Laravel or in a specific package.            |
-| Scope                |    `bg:make:scope`     |                     | Create a new scope class in Laravel or in a specific package.                |
+| Scope                |    `bg:make:scope`     |          ❌          | Create a new scope class in Laravel or in a specific package.                |
 | Seeder               |    `bg:make:seeder`    |    `make:seeder`    | Create a new seeder class in Laravel or in a specific package.               |
-| Container            |   `bg:make:service`    |                     | Create a new service container in Laravel or in a specific package.          |
+| Container            |   `bg:make:service`    |          ❌          | Create a new service container in Laravel or in a specific package.          |
 | Test                 |     `bg:make:test`     |     `make:test`     | Create a new test class in Laravel or in a specific package.                 |
-| Trait                |    `bg:make:trait`     |                     | Create a new interface in Laravel or in a specific package.                  |
+| Trait                |    `bg:make:trait`     |          ❌          | Create a new interface in Laravel or in a specific package.                  |
 
 ### Other `bg` commands
 
@@ -87,11 +94,9 @@ $ php artisan bg:install
 | Docs           | `bg:docs`           | Generate Scribe documentations.                                     |                            |
 | Env Variables  | `bg:env:publish`    | Publish all environment variables from root, packages, and domains. |                            |
 | Gitlab CI      | `bg:gitlab:publish` | Create a Gitlab CI YML file in a specific package.                  |                            |
-| Package List   | `bg:package:list`   | List all locally installed packages.                                |
-| Package Create | `bg:package:create` | Create a new Laravel package.                                       |
 | Install        | `bg:install`        | Setup your Laravel application to utilize the package.              |
 | Clear Logs     | `bg:log:clear`      | Clear laravel.log contents.                                         |
-| Test           | `bg:test`           | Run the application and package tests.                                         |
+| Test           | `bg:test`           | Run the application and package tests.                              |
 
 ## Change log
 

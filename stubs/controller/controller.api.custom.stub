@@ -23,7 +23,7 @@ class {{ class }} extends Controller
      */
     public function index(Request $request): JsonResponse
     {
-        return customResponse()
+        return simpleResponse()
             ->data([])
             ->message('Successfully collected record.')
             ->success()
@@ -40,7 +40,7 @@ class {{ class }} extends Controller
      */
     public function store(Request $request): JsonResponse
     {
-        return customResponse()
+        return simpleResponse()
             ->data([])
             ->message('Successfully created record.')
             ->success()
@@ -58,7 +58,7 @@ class {{ class }} extends Controller
      */
     public function show(Request $request, $id): JsonResponse
     {
-        return customResponse()
+        return simpleResponse()
             ->data([])
             ->message('Successfully collected record.')
             ->success()
@@ -76,7 +76,7 @@ class {{ class }} extends Controller
      */
     public function update(Request $request, $id): JsonResponse
     {
-        return customResponse()
+        return simpleResponse()
             ->data([])
             ->message('Successfully updated record.')
             ->success()
@@ -94,7 +94,7 @@ class {{ class }} extends Controller
      */
     public function destroy(Request $request, $id): JsonResponse
     {
-        return customResponse()
+        return simpleResponse()
             ->data([])
             ->message('Successfully archived record.')
             ->success()
@@ -112,7 +112,7 @@ class {{ class }} extends Controller
      */
     public function restore(Request $request, $id): JsonResponse
     {
-        return customResponse()
+        return simpleResponse()
             ->data([])
             ->message('Successfully restored record.')
             ->success()
