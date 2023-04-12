@@ -2,9 +2,9 @@
 
 namespace Luchavez\BoilerplateGenerator\Console\Commands;
 
+use Illuminate\Support\Collection;
 use Luchavez\BoilerplateGenerator\Exceptions\MissingNameArgumentException;
 use Luchavez\BoilerplateGenerator\Exceptions\PackageNotFoundException;
-use Illuminate\Support\Collection;
 use Symfony\Component\Console\Input\InputOption;
 
 /**
@@ -46,14 +46,13 @@ class DomainDisableCommand extends DomainEnableCommand
             ->getSummarizedDomains(package: $this->package_dir, with_providers: true)
             ->get($this->domain_name);
 
-        // Fail if not found or already enabled
+        // Fail if not found or already disabled
         if (! $domain) {
             $this->failed('Domain not found: '.$this->domain_name);
-
             return self::FAILURE;
-        } elseif (! $domain['is_enabled'] && ! $domain['is_loaded']) {
+        }
+        elseif (! $domain['is_enabled'] && ! $domain['is_loaded']) {
             $this->failed('Domain is already disabled: '.$this->domain_name);
-
             return self::FAILURE;
         }
 
@@ -76,7 +75,8 @@ class DomainDisableCommand extends DomainEnableCommand
             ->where('is_enabled', true);
 
         if ($enabled_children->count()) {
-            $this->warning('One or more child domains are still enabled: '.$enabled_children->keys()->implode(', '));
+            $child_list = $enabled_children->keys()->map(fn ($key) => $this->getBoldText($key))->implode(', ', ', and ');
+            $this->warning('One or more child domains are still enabled: '.$child_list);
             if ($this->confirm('Disable child domains?', true)) {
                 $enabled_children->each(function ($value, $key) use ($add_to_psr4_contents, $add_to_provider_contents) {
                     // Add the parent domain to PSR-4 contents
@@ -85,7 +85,6 @@ class DomainDisableCommand extends DomainEnableCommand
                 });
             } else {
                 $this->failed('Failed to disable domain as one or more child domains are not still enabled.');
-
                 return self::FAILURE;
             }
         }

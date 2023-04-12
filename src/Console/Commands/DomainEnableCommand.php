@@ -92,7 +92,8 @@ class DomainEnableCommand extends Command
             ->where('is_enabled', false);
 
         if ($disabled_parents->count()) {
-            $this->warning('One or more parent domains are not enabled yet: '.$disabled_parents->keys()->implode(', '));
+            $parent_list = $disabled_parents->keys()->map(fn ($key) => $this->getBoldText($key))->implode(', ', ', and ');
+            $this->warning('One or more parent domains are not enabled yet: '.$parent_list);
             if ($this->confirm('Enable parent domains?', true)) {
                 $disabled_parents->each(function ($value, $key) use ($add_to_psr4_contents, $add_to_provider_contents) {
                     // Add the parent domain to PSR-4 contents
@@ -115,7 +116,8 @@ class DomainEnableCommand extends Command
             ->where('is_enabled', false);
 
         if ($disabled_children->count()) {
-            $this->warning('Found one or more child domains that are not enabled yet: '.$disabled_children->keys()->implode(', '));
+            $child_list = $disabled_children->keys()->map(fn ($key) => $this->getBoldText($key))->implode(', ', ', and ');
+            $this->warning('Found one or more child domains that are not enabled yet: '.$child_list);
             if ($this->confirm('Enable child domains?', $this->includeChildDomains())) {
                 $disabled_children->each(function ($value, $key) use ($add_to_provider_contents, $add_to_psr4_contents) {
                     // Add the child domain to PSR-4 contents
@@ -252,18 +254,29 @@ class DomainEnableCommand extends Command
     protected function composerRequireOrDump(): bool
     {
         if ($this->package_dir) {
-            $process = make_process(['composer', 'require', $this->package_dir]);
+            // Uninstall first
+            $process = make_process(['composer', 'remove', $this->package_dir]);
 
-            $this->ongoing('Reinstalling '.$this->package_dir.' to reflect changes');
+            $this->ongoing('Uninstalling '.$this->package_dir);
 
             $process->start();
 
             $process->wait();
 
             if ($process->isSuccessful()) {
-                $this->done('Reinstalled '.$this->package_dir);
+                $process = make_process(['composer', 'require', $this->package_dir]);
 
-                return true;
+                $this->ongoing('Reinstalling '.$this->package_dir.' to reflect changes');
+
+                $process->start();
+
+                $process->wait();
+
+                if ($process->isSuccessful()) {
+                    $this->done('Reinstalled '.$this->package_dir);
+
+                    return true;
+                }
             }
 
             $this->failed('Failed to reinstall '.$this->package_dir);

@@ -51,7 +51,7 @@ class PackageDisableCommand extends Command
      */
     public function handle(): void
     {
-        $this->setVendorPackageDomain(show_default_package: false, is_loaded: true);
+        $this->setVendorPackageDomain(show_domain_choices: false, show_default_package: false, is_loaded: true);
 
         if ($this->vendor_name && $this->package_name) {
             $this->call(
