@@ -13,6 +13,7 @@ use Luchavez\BoilerplateGenerator\Console\Commands\DomainCreateCommand;
 use Luchavez\BoilerplateGenerator\Console\Commands\DomainDisableCommand;
 use Luchavez\BoilerplateGenerator\Console\Commands\DomainEnableCommand;
 use Luchavez\BoilerplateGenerator\Console\Commands\DomainListCommand;
+use Luchavez\BoilerplateGenerator\Console\Commands\DomainRemoveCommand;
 use Luchavez\BoilerplateGenerator\Console\Commands\DtoMakeCommand;
 use Luchavez\BoilerplateGenerator\Console\Commands\EnvPublishCommand;
 use Luchavez\BoilerplateGenerator\Console\Commands\ExtendedMakeCast;
@@ -131,6 +132,7 @@ class BoilerplateGeneratorServiceProvider extends ServiceProvider
         DomainCreateCommand::class,
         DomainEnableCommand::class,
         DomainDisableCommand::class,
+        DomainRemoveCommand::class,
         DomainListCommand::class,
         // Todo: DomainPublishCommand::class,
     ];

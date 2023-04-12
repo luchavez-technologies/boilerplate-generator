@@ -121,12 +121,8 @@ MIT. Please see the [license file](license.md) for more information.
 
 [ico-version]: https://img.shields.io/packagist/v/luchavez/boilerplate-generator.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/luchavez/boilerplate-generator.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/luchavez/boilerplate-generator/master.svg?style=flat-square
-[ico-styleci]: https://styleci.io/repos/12345678/shield
 
 [link-packagist]: https://packagist.org/packages/luchavez/boilerplate-generator
 [link-downloads]: https://packagist.org/packages/luchavez/boilerplate-generator
-[link-travis]: https://travis-ci.org/luchavez/boilerplate-generator
-[link-styleci]: https://styleci.io/repos/12345678
 [link-author]: https://github.com/luchmewep
 [link-contributors]: ../../contributors
