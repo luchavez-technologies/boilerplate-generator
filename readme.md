@@ -3,7 +3,7 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-![Supercharge your Laravel App!](./images/banner.png)
+![Supercharge your Laravel App!](images/banner.png)
 
 If you're developing a Laravel app, you know how quickly it can grow and become complex. You don't want to end up with a messy codebase that's hard to maintain and debug. You need a way to organize your code into modular and reusable packages and domains that imitates the `Domain-Driven Design (DDD)` principles.
 
@@ -11,7 +11,7 @@ That's where `luchavez/boilerplate-generator` comes in handy. It's a Laravel pac
 
 With `luchavez/boilerplate-generator`, you can keep your Laravel app clean, structured, and scalable. You can also share your packages with the world or use them in other projects. It's the ultimate tool for Laravel developers who want to level up their skills and productivity.
 
-<p align="center"><img src="./images/logo.png" width="300"/></p>
+<p align="center"><img src="images/logo.png" width="300"/></p>
 
 ## Installation
 
@@ -41,6 +41,7 @@ php artisan bg:env:publish --all  // publishes predefined env variables to the `
 |----------------|---------------------|-------------------------------------|
 | Domain List    | `bg:domain:list`    | List all locally installed domains. |
 | Domain Create  | `bg:domain:create`  | Create a new Laravel domain.        |
+| Domain Remove  | `bg:domain:remove`  | Remove a Laravel domain.            |
 | Domain Enable  | `bg:domain:enable`  | Enable a Laravel domain.            |
 | Domain Disable | `bg:domain:disable` | Disable a Laravel domain.           |
 

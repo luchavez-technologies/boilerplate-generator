@@ -50,8 +50,7 @@ class DomainDisableCommand extends DomainEnableCommand
         if (! $domain) {
             $this->failed('Domain not found: '.$this->domain_name);
             return self::FAILURE;
-        }
-        elseif (! $domain['is_enabled'] && ! $domain['is_loaded']) {
+        } elseif (! $domain['is_enabled'] && ! $domain['is_loaded']) {
             $this->failed('Domain is already disabled: '.$this->domain_name);
             return self::FAILURE;
         }

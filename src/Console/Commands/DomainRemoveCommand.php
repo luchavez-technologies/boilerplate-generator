@@ -47,7 +47,6 @@ class DomainRemoveCommand extends DomainEnableCommand
         // Fail if not found
         if (! $domain) {
             $this->failed('Domain not found: '.$this->domain_name);
-
             return self::FAILURE;
         }
 
@@ -61,8 +60,7 @@ class DomainRemoveCommand extends DomainEnableCommand
 
             $disable_args['name'] = $this->domain_name;
             $this->call('bg:domain:disable', $disable_args);
-        }
-        else {
+        } else {
             $this->note('Domain is already disabled.');
         }
 
@@ -87,12 +85,10 @@ class DomainRemoveCommand extends DomainEnableCommand
         // Proceed with domain deletion
         if (File::deleteDirectory($domain['path'])) {
             $this->done('Successfully deleted the domain: '.$this->getBoldText($this->domain_name));
-
             return self::SUCCESS;
         }
 
         $this->failed('Failed to delete the domain: '.$this->getBoldText($this->domain_name));
-
         return self::FAILURE;
     }
 }
