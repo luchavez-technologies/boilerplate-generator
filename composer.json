@@ -15,7 +15,6 @@
         "php": "^8.0",
         "illuminate/support": "~8|~9",
         "jeroen-g/laravel-packager": "^2.9",
-        "pestphp/pest": "^1.23|^2.5",
         "pestphp/pest-plugin-laravel": "^1.4|^2.0",
         "pestphp/pest-plugin-faker": "^1.0|^2.0",
         "knuckleswtf/scribe": "^4.19",
