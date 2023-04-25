@@ -14,13 +14,13 @@
     "require": {
         "php": "^8.0",
         "illuminate/support": "~8|~9",
-        "jeroen-g/laravel-packager": "^2.8",
-        "pestphp/pest": "^1.22",
-        "pestphp/pest-plugin-laravel": "^1.2",
-        "milroyfraser/pest-plugin-gwt": "^0.0.3",
-        "pestphp/pest-plugin-faker": "^1.0",
-        "knuckleswtf/scribe": "^4.1",
-        "laravel/pint": "^1.2",
+        "jeroen-g/laravel-packager": "^2.9",
+        "pestphp/pest": "^1.23|^2.5",
+        "pestphp/pest-plugin-laravel": "^1.4|^2.0",
+        "milroyfraser/pest-plugin-gwt": "^0.0.3|^1.0",
+        "pestphp/pest-plugin-faker": "^1.0|^2.0",
+        "knuckleswtf/scribe": "^4.19",
+        "laravel/pint": "^1.5|^1.9",
         "luchavez/starter-kit": "^1.0"
     },
     "require-dev": {
