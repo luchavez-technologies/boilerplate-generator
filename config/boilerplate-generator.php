@@ -7,5 +7,5 @@ return [
         'email' => env('BG_AUTHOR_EMAIL', 'jamescarloluchavez@gmail.com'),
         'homepage' => env('BG_AUTHOR_HOMEPAGE', 'https://www.linkedin.com/in/jsluchavez'),
     ],
-    'skeleton' => env('BG_PACKAGE_SKELETON', 'https://github.com/luchmewep/laravel-package-skeleton/archive/develop.zip'),
+    'skeleton' => env('BG_PACKAGE_SKELETON', 'https://github.com/luchavez-technologies/laravel-package-skeleton/archive/develop.zip'),
 ];
